@@ -3,21 +3,21 @@ import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 const characters = [
-  { id:'gojo', name:'Satoru Gojo', role:'The Honoured One', technique:'Limitless · Six Eyes', image:'/assets/gojo.png', color:'ice', note:'The strongest modern sorcerer. Infinity turns the space between Gojo and his opponent into an impossible distance.' },
-  { id:'sukuna', name:'Ryomen Sukuna', role:'King of Curses', technique:'Shrine · Malevolent Shrine', image:'/assets/sukuna.png', color:'red', note:'A calamity from another age. Sukuna treats jujutsu as an art of ruthless precision.' },
-  { id:'yuji', name:'Yuji Itadori', role:'The Vessel', technique:'Divergent Fist · Black Flash', image:'/assets/itadori.png', color:'orange', note:'A body built for extraordinary physical ability, carrying a history that keeps rewriting the rules.' },
-  { id:'megumi', name:'Megumi Fushiguro', role:'Ten Shadows Heir', technique:'Ten Shadows Technique', image:'/assets/megumi.png', color:'violet', note:'A technique with enormous tactical range, expressed through shikigami and the medium of shadow.' },
-  { id:'nobara', name:'Nobara Kugisaki', role:'Straw Doll Sorcerer', technique:'Resonance · Hairpin', image:'/assets/nobara.png', color:'pink', note:'A precise, punishing technique that makes a distant connection feel dangerously close.' },
-  { id:'geto', name:'Suguru Geto', role:'Curse User', technique:'Cursed Spirit Manipulation', image:'/assets/geto.png', color:'gold', note:'A sorcerer whose ideology became as dangerous as the spirits he commanded.' },
-  { id:'toji', name:'Toji Fushiguro', role:'Sorcerer Killer', technique:'Heavenly Restriction', image:'/assets/toji.png', color:'steel', note:'A complete absence of cursed energy traded for a body operating beyond ordinary limits.' },
-  { id:'nanami', name:'Kento Nanami', role:'Grade 1 Sorcerer', technique:'Ratio Technique', image:'/assets/nanami.png', color:'sand', note:'A disciplined professional who finds a weak point and makes the arithmetic hurt.' },
+  { id:'gojo', name:'Satoru Gojo', role:'The Honoured One', technique:'Limitless · Six Eyes', image:'/assets/gojo.webp', color:'ice', note:'The strongest modern sorcerer. Infinity turns the space between Gojo and his opponent into an impossible distance.' },
+  { id:'sukuna', name:'Ryomen Sukuna', role:'King of Curses', technique:'Shrine · Malevolent Shrine', image:'/assets/sukuna.webp', color:'red', note:'A calamity from another age. Sukuna treats jujutsu as an art of ruthless precision.' },
+  { id:'yuji', name:'Yuji Itadori', role:'The Vessel', technique:'Divergent Fist · Black Flash', image:'/assets/itadori.webp', color:'orange', note:'A body built for extraordinary physical ability, carrying a history that keeps rewriting the rules.' },
+  { id:'megumi', name:'Megumi Fushiguro', role:'Ten Shadows Heir', technique:'Ten Shadows Technique', image:'/assets/megumi.webp', color:'violet', note:'A technique with enormous tactical range, expressed through shikigami and the medium of shadow.' },
+  { id:'nobara', name:'Nobara Kugisaki', role:'Straw Doll Sorcerer', technique:'Resonance · Hairpin', image:'/assets/nobara.webp', color:'pink', note:'A precise, punishing technique that makes a distant connection feel dangerously close.' },
+  { id:'geto', name:'Suguru Geto', role:'Curse User', technique:'Cursed Spirit Manipulation', image:'/assets/geto.webp', color:'gold', note:'A sorcerer whose ideology became as dangerous as the spirits he commanded.' },
+  { id:'toji', name:'Toji Fushiguro', role:'Sorcerer Killer', technique:'Heavenly Restriction', image:'/assets/toji.webp', color:'steel', note:'A complete absence of cursed energy traded for a body operating beyond ordinary limits.' },
+  { id:'nanami', name:'Kento Nanami', role:'Grade 1 Sorcerer', technique:'Ratio Technique', image:'/assets/nanami.webp', color:'sand', note:'A disciplined professional who finds a weak point and makes the arithmetic hurt.' },
 ];
 
 const domains = [
-  { id:'void', name:'Unlimited Void', owner:'Satoru Gojo', kanji:'無量空処', image:'/assets/gojo_domain.png', type:'Barrier · Sure-hit', detail:'The target is flooded with boundless information. Perception continues, but the ability to act collapses.', accent:'#c7d9e8' },
-  { id:'shrine', name:'Malevolent Shrine', owner:'Ryomen Sukuna', kanji:'伏魔御廚子', image:'/assets/sukuna_domain.png', type:'Open barrier · Sure-hit', detail:'A domain without a closed shell. Its range becomes a relentless execution ground for Cleave and Dismantle.', accent:'#e95b49' },
-  { id:'garden', name:'Chimera Shadow Garden', owner:'Megumi Fushiguro', kanji:'嵌合暗翳庭', image:'/assets/megumi_domain.png', type:'Incomplete · Shadow medium', detail:'An unfinished territory that turns shadow into space, multiplying the possibilities of the Ten Shadows Technique.', accent:'#a7a0d7' },
-  { id:'perfection', name:'Self-Embodiment of Perfection', owner:'Mahito', kanji:'自閉円頓裹', image:'/assets/mahito.png', type:'Barrier · Soul contact', detail:'The domain removes the need for ordinary physical contact. The soul itself becomes the point of contact.', accent:'#a7c9c0' },
+  { id:'void', name:'Unlimited Void', owner:'Satoru Gojo', kanji:'無量空処', image:'/assets/gojo_domain.webp', type:'Barrier · Sure-hit', detail:'The target is flooded with boundless information. Perception continues, but the ability to act collapses.', accent:'#c7d9e8' },
+  { id:'shrine', name:'Malevolent Shrine', owner:'Ryomen Sukuna', kanji:'伏魔御廚子', image:'/assets/sukuna_domain.webp', type:'Open barrier · Sure-hit', detail:'A domain without a closed shell. Its range becomes a relentless execution ground for Cleave and Dismantle.', accent:'#e95b49' },
+  { id:'garden', name:'Chimera Shadow Garden', owner:'Megumi Fushiguro', kanji:'嵌合暗翳庭', image:'/assets/megumi_domain.webp', type:'Incomplete · Shadow medium', detail:'An unfinished territory that turns shadow into space, multiplying the possibilities of the Ten Shadows Technique.', accent:'#a7a0d7' },
+  { id:'perfection', name:'Self-Embodiment of Perfection', owner:'Mahito', kanji:'自閉円頓裹', image:'/assets/mahito.webp', type:'Barrier · Soul contact', detail:'The domain removes the need for ordinary physical contact. The soul itself becomes the point of contact.', accent:'#a7c9c0' },
 ];
 
 const incidents = [
@@ -81,7 +81,7 @@ function App() {
 
     <main id="top">
       <section className="hero">
-        <div className="hero-backdrop"><img src="/assets/shibuya.png" alt="Shibuya at night, archive cover artwork"/><div className="hero-wash"/></div>
+        <div className="hero-backdrop"><img src="/assets/shibuya.webp" alt="Shibuya at night, archive cover artwork"/><div className="hero-wash"/></div>
         <div className="hero-topline"><span>JAPAN / TOKYO</span><span>FIELD DOCUMENT 001—2026</span><span>CLASSIFICATION: RESTRICTED</span></div>
         <div className="hero-layout">
           <div className="hero-index"><span>呪術廻戦</span><b>JUJUTSU KAISEN</b><i>UNOFFICIAL FIELD ARCHIVE</i></div>
@@ -153,7 +153,7 @@ function App() {
             {incidents.map(item => <article className="timeline-item" key={item.no} data-reveal><span className="timeline-no">{item.no}</span><div className="timeline-body"><div className="timeline-meta"><span>{item.date}</span><b>{item.tag}</b></div><h3>{item.title}</h3><p>{item.body}</p></div><span className="timeline-mark">↗</span></article>)}
           </div>
         </div>
-        <div className="incident-image"><img src="/assets/shibuya.png" alt="Shibuya incident visual record" loading="lazy"/><div><span>INCIDENT / 1031</span><b>SHIBUYA<br/>AFTER DARK.</b><i>THE CITY BECAME A BARRIER.</i></div></div>
+        <div className="incident-image"><img src="/assets/shibuya.webp" alt="Shibuya incident visual record" loading="lazy"/><div><span>INCIDENT / 1031</span><b>SHIBUYA<br/>AFTER DARK.</b><i>THE CITY BECAME A BARRIER.</i></div></div>
       </section>
 
       <section className="lab-section" id="domain-lab">
